@@ -4,7 +4,7 @@ import './App.css';
 /**
  * React app that displays a tip Calculator. 
  * Todo:
- * 1. Setup basic UI architecture with initial responsive design
+ * 1. DONE- Setup basic UI architecture with initial responsive design
  * 2. Add intial rough UI layout with dummy content with no styling
  * 3. Add initial styling to match frontend design
  * 4. Update responsive design for mobile and desktop
@@ -17,7 +17,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      Hello World
+      <main>
+        Hello World
+      </main>
     </div>
   );
 }
