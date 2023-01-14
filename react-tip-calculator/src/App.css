@@ -18,6 +18,30 @@ main {
   box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container, .ui__calculateButton--container {
+  flex: 1;
+}
+
+.ui__tipPercentage--container {
+  flex: .5;
+}
+
+.ui__inputs--container {
+  display: flex;
+}
+
+.inputs__billAmount--container {
+  flex:2;
+}
+
+.inputs__numberOfPeople--container {
+  flex: 1;
 }
 
 @media only screen and (max-width: 600px){

@@ -18,16 +18,16 @@ function App() {
   return (
     <div className="App">
       <main>
-        <section> tip amount</section>
-        <section> tip per person</section>
-        <section>
-          <div> Bill amount</div>
-          <div> Number of People</div>
+        <section className="ui__tipAmount--container"> tip amount</section>
+        <section className="ui__totalPerPerson--container"> tip per person</section>
+        <section className="ui__inputs--container">
+          <div className="inputs__billAmount--container"> Bill amount</div>
+          <div className="inputs__numberOfPeople--container"> Number of People</div>
         </section>
-        <section>
+        <section className="ui__tipPercentage--container">
           Tip percentage
         </section>
-        <section> Calculate button</section>
+        <section className="ui__calculateButton--container"> Calculate button</section>
       </main>
     </div>
   );
