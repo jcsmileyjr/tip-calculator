@@ -18,7 +18,16 @@ function App() {
   return (
     <div className="App">
       <main>
-        Hello World
+        <section> tip amount</section>
+        <section> tip per person</section>
+        <section>
+          <div> Bill amount</div>
+          <div> Number of People</div>
+        </section>
+        <section>
+          Tip percentage
+        </section>
+        <section> Calculate button</section>
       </main>
     </div>
   );
