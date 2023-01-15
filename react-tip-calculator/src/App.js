@@ -1,6 +1,6 @@
 import "./App.css";
-import GroupIcon from './assets/peoples-group-icon.png';
-
+import GroupIcon from "./assets/peoples-group-icon.png";
+import React, { useState } from "react";
 /**
  * React app that displays a tip Calculator.
  * Todo:
@@ -15,28 +15,39 @@ import GroupIcon from './assets/peoples-group-icon.png';
  * @returns
  */
 function App() {
+  const [billAmount, setBillAmount] = useState(100.02);
+  const [numberOfPeople, setNumberOfPeople] = useState(25);
+
   return (
     <div className="App">
       <main>
         <section className="ui__tipAmount--container">
-          <p>
-            Tip Amount 
+          <p>Tip Amount</p>
+          <p className="highlightedAmount">
+            <span className="dollarSign">$</span>4.02
           </p>
-          <p className="highlightedAmount"><span className="dollarSign">$</span>4.02</p>
         </section>
         <section className="ui__totalPerPerson--container">
-          <p>
-            Total Per Person 
+          <p>Total Per Person</p>
+          <p className="highlightedAmount">
+            <span className="dollarSign">$</span>12.02
           </p>
-          <p className="highlightedAmount"><span className="dollarSign">$</span>12.02</p>
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p className="divider"><span className="inputsDollarSign">$</span> <span className="centerParagraphText ">102.02</span></p>
+            <p className="divider">
+              <span className="inputsDollarSign">$</span>{" "}
+              <span className="centerParagraphText ">{billAmount}</span>
+            </p>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
-            <p className="divider imageInline"><span><img src={GroupIcon} className="input__image--style" alt="" /></span><span className="centerParagraphText ">25</span> </p>
+            <p className="divider imageInline">
+              <span>
+                <img src={GroupIcon} className="input__image--style" alt="" />
+              </span>
+              <span className="centerParagraphText ">{numberOfPeople}</span>{" "}
+            </p>
             <p>Number of People</p>
           </div>
         </section>
@@ -47,7 +58,9 @@ function App() {
           <button type="button">20%</button>
         </section>
         <section className="ui__calculateButton--container">
-          <button className="calculateButton--style" type="button">Calculate</button>
+          <button className="calculateButton--style" type="button">
+            Calculate
+          </button>
         </section>
       </main>
     </div>
