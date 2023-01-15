@@ -6,9 +6,9 @@ import React, { useState } from "react";
  * Todo:
  * 1. DONE- Setup basic UI architecture with initial responsive design
  * 2. DONE- Add intial rough UI layout with dummy content with no styling
- * 3. Add initial styling to match frontend design
+ * 3. DONE- Add initial styling to match frontend design
  * 4. Update responsive design for mobile and desktop
- * 5. Refactor to add state for bill amount and number of people
+ * 5. DONE- Refactor to add state for bill amount and number of people
  * 6. Refactor to add functionality to update tip amount and total per person
  * 7. Refactor to change the above based on tip percentage
  * 8. Refactor to add accessibilty features
@@ -17,8 +17,13 @@ import React, { useState } from "react";
 function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
-  let tip = billAmount * .05;
-  let amount = (billAmount + tip) / numberOfPeople;
+  let tip = parseFloat(billAmount) * .05;
+  let amount
+  if(numberOfPeople === ""){
+    amount = "error"
+  }else{
+    amount = ((parseFloat(billAmount) + tip) / numberOfPeople).toFixed(2);
+  }
   return (
     <div className="App">
       <main>
@@ -33,15 +38,15 @@ function App() {
           <p>Total Per Person</p>
           <p className="highlightedAmount">
             <span className="dollarSign">$</span>
-            {amount.toFixed(2)}
+            {amount}
           </p>
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p className="divider">
-              <span className="inputsDollarSign">$</span>{" "}
-              <span className="centerParagraphText ">{billAmount}</span>
-            </p>
+            <div  className="divider">
+              <span className="inputsDollarSign">$</span>
+              <input onChange={(e) => setBillAmount(e.target.value)} className="input__billAmount--style" type="text" value={billAmount} />
+            </div>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
@@ -49,7 +54,7 @@ function App() {
               <span>
                 <img src={GroupIcon} className="input__image--style" alt="" />
               </span>
-              <span className="centerParagraphText ">{numberOfPeople}</span>{" "}
+              <input type="number" className="input__numberOfPeople--style" onChange={(e) => setNumberOfPeople(e.target.value)} value={numberOfPeople} />
             </p>
             <p>Number of People</p>
           </div>
