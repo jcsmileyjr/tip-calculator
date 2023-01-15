@@ -1,4 +1,5 @@
 import "./App.css";
+import GroupIcon from './assets/peoples-group-icon.png';
 
 /**
  * React app that displays a tip Calculator.
@@ -19,23 +20,23 @@ function App() {
       <main>
         <section className="ui__tipAmount--container">
           <p>
-            Tip Amount <span>$</span>
-            <span>4.02</span>
+            Tip Amount 
           </p>
+          <p className="highlightedAmount"><span className="dollarSign">$</span>4.02</p>
         </section>
         <section className="ui__totalPerPerson--container">
           <p>
-            Total Per Person <span>$</span>
-            <span>12.02</span>
+            Total Per Person 
           </p>
+          <p className="highlightedAmount"><span className="dollarSign">$</span>12.02</p>
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p><span>$</span> 102.02</p>
+            <p className="divider"><span className="inputsDollarSign">$</span> 102.02</p>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
-            <p><span>icon</span> 25</p>
+            <p className="divider imageInline"><span><img src={GroupIcon} className="input__image--style" alt="" /></span> 25</p>
             <p>Number of People</p>
           </div>
         </section>
@@ -46,7 +47,7 @@ function App() {
           <button type="button">20%</button>
         </section>
         <section className="ui__calculateButton--container">
-          <button type="button">Calculate</button>
+          <button className="calculateButton--style" type="button">Calculate</button>
         </section>
       </main>
     </div>

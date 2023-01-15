@@ -5,6 +5,34 @@
   --Secondary-Gray-dark: whitesmoke;
 }
 
+/*Utility*/
+.highlightedAmount {
+  font-size: xxx-large;
+  margin-left: 20px;
+}
+
+.dollarSign {
+  vertical-align: super;
+  font-size: xx-large;
+}
+
+.inputsDollarSign {
+  color: gray;
+  font-size: xx-large;
+  vertical-align: top;
+}
+
+.divider {
+  border-bottom: 1px dotted gray;
+  width: 80%;
+}
+
+.imageInline {
+  display: flex;
+}
+
+/***/
+
 .App {
   text-align: center;
   display: flex;
@@ -25,7 +53,11 @@ main {
   justify-content: space-around;
 }
 
-.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container, .ui__calculateButton--container {
+p {
+  font-weight: bold;
+}
+
+.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--containe {
   flex: 1;
 }
 
@@ -40,16 +72,39 @@ main {
   display: flex;
 }
 
-.inputs__billAmount--container {
-  flex:2;
+.ui__inputs--container div p {
+  margin-top: 0;
+}
+
+.ui__inputs--container div .divider {
+  font-size: xxx-large;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.inputs__billAmount--container, .inputs__numberOfPeople--container {
+  flex:1.5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .inputs__numberOfPeople--container {
   flex: 1;
 }
 
+.input__image--style {
+  height: 30px;
+  margin-right: 10px;
+}
+
 .ui__tipAmount--container, .ui__totalPerPerson--container {
+  display: flex;
   background-color: var(--Primary-Gray-Light);
+  justify-content: center;
+  align-items: center;
 }
 
 .ui__inputs--container, .ui__calculateButton--container {
@@ -58,6 +113,43 @@ main {
 
 .ui__tipPercentage--container {
   background-color: var(--Primary-Gray-Dark);
+  display: flex;
+  align-items: center;
+}
+
+.ui__tipPercentage--container > button {
+  color: #028577;
+  font-weight: bold;
+  letter-spacing: .1em;
+  height: 50%;
+  padding: 0px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: white;
+}
+
+.ui__tipPercentage--container > button:hover {
+  color: white;
+  background-color: #028577;
+}
+
+.ui__calculateButton--container {
+  flex: .3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.calculateButton--style {
+  height: 50%;
+  width: 40%;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .1em;
+  background-color: #cf4637;
+  border: none;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 600px){
