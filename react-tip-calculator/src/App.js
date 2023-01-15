@@ -17,8 +17,8 @@ import React, { useState } from "react";
 function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
-  let tip = billAmount * .05;
-  let amount = (billAmount + tip) / numberOfPeople;
+  let tip = parseFloat(billAmount) * .05;
+  let amount = (parseFloat(billAmount) + tip) / numberOfPeople;
   return (
     <div className="App">
       <main>
@@ -38,10 +38,10 @@ function App() {
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p className="divider">
-              <span className="inputsDollarSign">$</span>{" "}
-              <span className="centerParagraphText ">{billAmount}</span>
-            </p>
+            <div  className="divider">
+              <span className="inputsDollarSign">$</span>
+              <input onChange={(e) => setBillAmount(e.target.value)} className="input__billAmount--style" type="text" value={billAmount} />
+            </div>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">

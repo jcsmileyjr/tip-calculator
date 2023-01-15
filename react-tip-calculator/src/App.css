@@ -20,6 +20,7 @@
   color: gray;
   font-size: xx-large;
   vertical-align: top;
+  font-weight: bold;
 }
 
 .divider {
@@ -36,6 +37,15 @@
 }
 
 /***/
+
+.input__billAmount--style {
+  font-size: larger;
+  width: 90%;
+  border: none;
+  background-color: transparent;
+  font-weight: bold;
+  text-align: center;
+}
 
 .App {
   text-align: center;
