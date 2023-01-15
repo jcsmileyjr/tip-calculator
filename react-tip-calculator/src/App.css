@@ -131,7 +131,7 @@ p {
   align-items: center;
 }
 
-.ui__tipPercentage--container > button {
+.ui__tipButton--style{
   color: #028577;
   font-weight: bold;
   letter-spacing: .1em;
@@ -142,9 +142,15 @@ p {
   background-color: white;
 }
 
-.ui__tipPercentage--container > button:hover {
+.ui__tipPercentage--container > button:hover, .selected {
   color: white;
   background-color: #028577;
+}
+
+
+
+.hot {
+  border: 1px solid red;
 }
 
 .ui__calculateButton--container {

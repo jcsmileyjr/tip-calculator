@@ -9,8 +9,8 @@ import React, { useState } from "react";
  * 3. DONE- Add initial styling to match frontend design
  * 4. Update responsive design for mobile and desktop
  * 5. DONE- Refactor to add state for bill amount and number of people
- * 6. Refactor to add functionality to update tip amount and total per person
- * 7. Refactor to change the above based on tip percentage
+ * 6. DONE- Refactor to add functionality to update tip amount and total per person
+ * 7. DONE- Refactor to change the above based on tip percentage
  * 8. Refactor to add accessibilty features
  * @returns
  */
@@ -72,10 +72,10 @@ function App() {
           </div>
         </section>
         <section className="ui__tipPercentage--container">
-          <button type="button" onClick={() => setTipPercentage(.05)}>5%</button>
-          <button type="button" onClick={() => setTipPercentage(.1)}>10%</button>
-          <button type="button" onClick={() => setTipPercentage(.15)}>15%</button>
-          <button type="button" onClick={() => setTipPercentage(.2)}>20%</button>
+          <button className={`ui__tipButton--style ${tipPercentage===.05?"selected":""}`} type="button" onClick={() => setTipPercentage(.05)}>5%</button>
+          <button className={`ui__tipButton--style ${tipPercentage===.1?"selected":""}`} type="button" onClick={() => setTipPercentage(.1)}>10%</button>
+          <button className={`ui__tipButton--style ${tipPercentage===.15?"selected":""}`} type="button" onClick={() => setTipPercentage(.15)}>15%</button>
+          <button className={`ui__tipButton--style ${tipPercentage===.2?"selected":""}`} type="button" onClick={() => setTipPercentage(.2)}>20%</button>
         </section>
         <section className="ui__calculateButton--container">
           <button className="calculateButton--style" type="button">
