@@ -5,6 +5,20 @@
   --Secondary-Gray-dark: whitesmoke;
 }
 
+/*Utility*/
+.highlightedAmount {
+  font-size: xxx-large;
+  margin-left: 20px;
+}
+
+.dollarSign {
+  vertical-align: super;
+  font-size: xx-large;
+}
+
+
+/***/
+
 .App {
   text-align: center;
   display: flex;
@@ -23,6 +37,10 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
+}
+
+p {
+  font-weight: bold;
 }
 
 .ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container, .ui__calculateButton--container {
@@ -49,7 +67,10 @@ main {
 }
 
 .ui__tipAmount--container, .ui__totalPerPerson--container {
+  display: flex;
   background-color: var(--Primary-Gray-Light);
+  justify-content: center;
+  align-items: center;
 }
 
 .ui__inputs--container, .ui__calculateButton--container {

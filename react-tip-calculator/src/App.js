@@ -19,15 +19,15 @@ function App() {
       <main>
         <section className="ui__tipAmount--container">
           <p>
-            Tip Amount <span>$</span>
-            <span>4.02</span>
+            Tip Amount 
           </p>
+          <p className="highlightedAmount"><span className="dollarSign">$</span>4.02</p>
         </section>
         <section className="ui__totalPerPerson--container">
           <p>
-            Total Per Person <span>$</span>
-            <span>12.02</span>
+            Total Per Person 
           </p>
+          <p className="highlightedAmount"><span className="dollarSign">$</span>12.02</p>
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
