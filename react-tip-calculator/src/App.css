@@ -181,4 +181,8 @@ p {
     width: 100vw;
     box-shadow: none;
   }
+
+  .input__image--style {
+    margin-right: 0;
+  }
 }
