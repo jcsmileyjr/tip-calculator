@@ -57,7 +57,7 @@ p {
   font-weight: bold;
 }
 
-.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container, .ui__calculateButton--container {
+.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--containe {
   flex: 1;
 }
 
@@ -126,6 +126,25 @@ p {
   border-radius: 10px;
   border: none;
   background-color: #028577;
+}
+
+.ui__calculateButton--container {
+  flex: .3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 20px;
+}
+
+.calculateButton--style {
+  height: 50%;
+  width: 40%;
+  font-weight: bold;
+  color: white;
+  letter-spacing: .1em;
+  background-color: #cf4637;
+  border: none;
+  border-radius: 8px;
 }
 
 @media only screen and (max-width: 600px){

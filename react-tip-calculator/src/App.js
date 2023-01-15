@@ -47,7 +47,7 @@ function App() {
           <button type="button">20%</button>
         </section>
         <section className="ui__calculateButton--container">
-          <button type="button">Calculate</button>
+          <button className="calculateButton--style" type="button">Calculate</button>
         </section>
       </main>
     </div>
