@@ -27,6 +27,10 @@
   width: 80%;
 }
 
+.centerParagraphText {
+  width: 100%;
+}
+
 .imageInline {
   display: flex;
 }

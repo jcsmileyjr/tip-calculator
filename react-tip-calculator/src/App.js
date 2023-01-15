@@ -32,11 +32,11 @@ function App() {
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p className="divider"><span className="inputsDollarSign">$</span> 102.02</p>
+            <p className="divider"><span className="inputsDollarSign">$</span> <span className="centerParagraphText ">102.02</span></p>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
-            <p className="divider imageInline"><span><img src={GroupIcon} className="input__image--style" alt="" /></span> 25</p>
+            <p className="divider imageInline"><span><img src={GroupIcon} className="input__image--style" alt="" /></span><span className="centerParagraphText ">25</span> </p>
             <p>Number of People</p>
           </div>
         </section>
