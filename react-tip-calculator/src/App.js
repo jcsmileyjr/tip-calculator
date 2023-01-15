@@ -17,20 +17,23 @@ import React, { useState } from "react";
 function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
-
+  let tip = billAmount * .05;
+  let amount = (billAmount + tip) / numberOfPeople;
   return (
     <div className="App">
       <main>
         <section className="ui__tipAmount--container">
           <p>Tip Amount</p>
           <p className="highlightedAmount">
-            <span className="dollarSign">$</span>4.02
+            <span className="dollarSign">$</span>
+            {tip.toFixed(2)}
           </p>
         </section>
         <section className="ui__totalPerPerson--container">
           <p>Total Per Person</p>
           <p className="highlightedAmount">
-            <span className="dollarSign">$</span>12.02
+            <span className="dollarSign">$</span>
+            {amount.toFixed(2)}
           </p>
         </section>
         <section className="ui__inputs--container">
