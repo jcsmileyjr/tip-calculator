@@ -1,6 +1,7 @@
 :root {
-  --Primary-Gray-Medium: rgb(231, 231, 231);
   --Primary-Gray-Light: rgb(249, 249, 249);
+  --Primary-Gray-Medium: rgb(242, 241, 241);
+  --Primary-Gray-Dark: rgb(231, 231, 231);
   --Secondary-Gray-dark: whitesmoke;
 }
 
@@ -8,16 +9,55 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  margin:20px 0;
+  margin:40px 0;
 }
 
 main {
   border-radius: 10px;
   width: 50%;
-  height: 100vh;
+  height: 80vh;
   box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
   -webkit-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
   -moz-box-shadow: 0px 7px 15px 2px rgba(0,0,0,0.75);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container, .ui__calculateButton--container {
+  flex: 1;
+}
+
+.ui__tipPercentage--container {
+  flex: .5;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ui__inputs--container {
+  display: flex;
+}
+
+.inputs__billAmount--container {
+  flex:2;
+}
+
+.inputs__numberOfPeople--container {
+  flex: 1;
+}
+
+.ui__tipAmount--container, .ui__totalPerPerson--container {
+  background-color: var(--Primary-Gray-Light);
+}
+
+.ui__inputs--container, .ui__calculateButton--container {
+  background-color: var(--Primary-Gray-Medium);
+}
+
+.ui__tipPercentage--container {
+  background-color: var(--Primary-Gray-Dark);
 }
 
 @media only screen and (max-width: 600px){
