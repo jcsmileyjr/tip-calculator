@@ -17,11 +17,11 @@ import React, { useState } from "react";
 function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
-  let tip = parseFloat(billAmount) * .05;
-  let amount
-  if(numberOfPeople === ""){
-    amount = "error"
-  }else{
+  let tip = parseFloat(billAmount) * 0.05;
+  let amount;
+  if (numberOfPeople === "") {
+    amount = "error";
+  } else {
     amount = ((parseFloat(billAmount) + tip) / numberOfPeople).toFixed(2);
   }
   return (
@@ -43,9 +43,14 @@ function App() {
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <div  className="divider">
+            <div className="divider">
               <span className="inputsDollarSign">$</span>
-              <input onChange={(e) => setBillAmount(e.target.value)} className="input__billAmount--style" type="text" value={billAmount} />
+              <input
+                onChange={(e) => setBillAmount(e.target.value)}
+                className="input__billAmount--style"
+                type="text"
+                value={billAmount}
+              />
             </div>
             <p>Billl Amount</p>
           </div>
@@ -54,7 +59,12 @@ function App() {
               <span>
                 <img src={GroupIcon} className="input__image--style" alt="" />
               </span>
-              <input type="number" className="input__numberOfPeople--style" onChange={(e) => setNumberOfPeople(e.target.value)} value={numberOfPeople} />
+              <input
+                type="number"
+                className="input__numberOfPeople--style"
+                onChange={(e) => setNumberOfPeople(e.target.value)}
+                value={numberOfPeople}
+              />
             </p>
             <p>Number of People</p>
           </div>
