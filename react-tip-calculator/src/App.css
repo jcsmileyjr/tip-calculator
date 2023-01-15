@@ -57,7 +57,7 @@ p {
   font-weight: bold;
 }
 
-.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--containe {
+.ui__tipAmount--container, .ui__totalPerPerson--container, .ui__inputs--container {
   flex: 1;
 }
 
@@ -134,7 +134,7 @@ p {
 }
 
 .ui__calculateButton--container {
-  flex: .3;
+  flex: .4;
   display: flex;
   justify-content: flex-end;
   align-items: center;
