@@ -32,7 +32,7 @@ function App() {
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p className="divider"><span>$</span> 102.02</p>
+            <p className="divider"><span className="inputsDollarSign">$</span> 102.02</p>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
