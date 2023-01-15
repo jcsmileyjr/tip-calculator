@@ -38,7 +38,7 @@
 
 /***/
 
-.input__billAmount--style {
+.input__billAmount--style, .input__numberOfPeople--style {
   font-size: larger;
   width: 90%;
   border: none;

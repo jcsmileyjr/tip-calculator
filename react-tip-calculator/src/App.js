@@ -18,7 +18,12 @@ function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
   let tip = parseFloat(billAmount) * .05;
-  let amount = (parseFloat(billAmount) + tip) / numberOfPeople;
+  let amount
+  if(numberOfPeople === ""){
+    amount = "error"
+  }else{
+    amount = ((parseFloat(billAmount) + tip) / numberOfPeople).toFixed(2);
+  }
   return (
     <div className="App">
       <main>
@@ -33,7 +38,7 @@ function App() {
           <p>Total Per Person</p>
           <p className="highlightedAmount">
             <span className="dollarSign">$</span>
-            {amount.toFixed(2)}
+            {amount}
           </p>
         </section>
         <section className="ui__inputs--container">
@@ -49,7 +54,7 @@ function App() {
               <span>
                 <img src={GroupIcon} className="input__image--style" alt="" />
               </span>
-              <span className="centerParagraphText ">{numberOfPeople}</span>{" "}
+              <input type="number" className="input__numberOfPeople--style" onChange={(e) => setNumberOfPeople(e.target.value)} value={numberOfPeople} />
             </p>
             <p>Number of People</p>
           </div>
