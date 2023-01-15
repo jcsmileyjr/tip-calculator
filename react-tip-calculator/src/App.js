@@ -17,7 +17,9 @@ import React, { useState } from "react";
 function App() {
   const [billAmount, setBillAmount] = useState(100.02);
   const [numberOfPeople, setNumberOfPeople] = useState(25);
-  let tip = parseFloat(billAmount) * 0.05;
+  const [tipPercentage, setTipPercentage] = useState(.05);
+
+  let tip = parseFloat(billAmount) * tipPercentage;
   let amount;
   if (numberOfPeople === "") {
     amount = "error";
@@ -70,10 +72,10 @@ function App() {
           </div>
         </section>
         <section className="ui__tipPercentage--container">
-          <button type="button">5%</button>
-          <button type="button">10%</button>
-          <button type="button">15%</button>
-          <button type="button">20%</button>
+          <button type="button" onClick={() => setTipPercentage(.05)}>5%</button>
+          <button type="button" onClick={() => setTipPercentage(.1)}>10%</button>
+          <button type="button" onClick={() => setTipPercentage(.15)}>15%</button>
+          <button type="button" onClick={() => setTipPercentage(.2)}>20%</button>
         </section>
         <section className="ui__calculateButton--container">
           <button className="calculateButton--style" type="button">
