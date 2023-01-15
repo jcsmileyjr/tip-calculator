@@ -1,4 +1,5 @@
 import "./App.css";
+import GroupIcon from './assets/peoples-group-icon.png';
 
 /**
  * React app that displays a tip Calculator.
@@ -31,11 +32,11 @@ function App() {
         </section>
         <section className="ui__inputs--container">
           <div className="inputs__billAmount--container">
-            <p><span>$</span> 102.02</p>
+            <p className="divider"><span>$</span> 102.02</p>
             <p>Billl Amount</p>
           </div>
           <div className="inputs__numberOfPeople--container">
-            <p><span>icon</span> 25</p>
+            <p className="divider imageInline"><span><img src={GroupIcon} className="input__image--style" alt="" /></span> 25</p>
             <p>Number of People</p>
           </div>
         </section>
