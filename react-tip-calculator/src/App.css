@@ -113,6 +113,19 @@ p {
 
 .ui__tipPercentage--container {
   background-color: var(--Primary-Gray-Dark);
+  display: flex;
+  align-items: center;
+}
+
+.ui__tipPercentage--container > button {
+  color: white;
+  font-weight: bold;
+  letter-spacing: .1em;
+  height: 50%;
+  padding: 0px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #028577;
 }
 
 @media only screen and (max-width: 600px){
