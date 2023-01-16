@@ -52,12 +52,13 @@ function App() {
                 className="input__billAmount--style"
                 type="text"
                 value={billAmount}
+                id="billAmount"
               />
             </div>
-            <p>Billl Amount</p>
+            <label htmlFor="billAmount">Billl Amount</label>
           </div>
           <div className="inputs__numberOfPeople--container">
-            <p className="divider imageInline">
+            <div className="divider imageInline">
               <span>
                 <img src={GroupIcon} className="input__image--style" alt="" />
               </span>
@@ -66,9 +67,10 @@ function App() {
                 className="input__numberOfPeople--style"
                 onChange={(e) => setNumberOfPeople(e.target.value)}
                 value={numberOfPeople}
+                id="numberOfPeople"
               />
-            </p>
-            <p>Number of People</p>
+            </div>
+            <label htmlFor="numberOfPeople">Number of People</label>
           </div>
         </section>
         <section className="ui__tipPercentage--container">

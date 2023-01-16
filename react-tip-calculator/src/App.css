@@ -67,7 +67,7 @@ main {
   justify-content: space-around;
 }
 
-p {
+p, label {
   font-weight: bold;
 }
 
@@ -86,7 +86,7 @@ p {
   display: flex;
 }
 
-.ui__inputs--container div p {
+.ui__inputs--container div label {
   margin-top: 0;
 }
 
@@ -193,7 +193,10 @@ p {
   }
 
   .input__image--style {
-    /* height: 20px; */
     width: 100%;
+  }
+
+  .ui__inputs--container div .divider {
+    font-size: large;
   }
 }
