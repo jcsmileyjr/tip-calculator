@@ -80,7 +80,7 @@ function App() {
           <button className={`ui__tipButton--style ${tipPercentage===.2?"selected":""}`} type="button" onClick={() => setTipPercentage(.2)}>20%</button>
         </section>
         <section className="ui__calculateButton--container">
-          <button className="calculateButton--style" type="button">
+          <button onClick={() => alert("This is really needed but was in the design")} className="calculateButton--style" type="button">
             Calculate
           </button>
         </section>
