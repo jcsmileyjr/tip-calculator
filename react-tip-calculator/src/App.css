@@ -172,7 +172,7 @@ p {
   border-radius: 8px;
 }
 
-@media only screen and (max-width: 600px){
+@media only screen and (max-width: 700px){
   .App {
     margin: 0;
   }
@@ -184,5 +184,16 @@ p {
 
   .input__image--style {
     margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 950px){
+  .input__billAmount--style, .input__numberOfPeople--style {
+    font-size: 40px;
+  }
+
+  .input__image--style {
+    /* height: 20px; */
+    width: 100%;
   }
 }
